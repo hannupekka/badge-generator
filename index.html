@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,120 +11,141 @@
   <link href="css/bootstrap-colorpicker.min.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet" />
   <style type="text/css">
-    #list li{
+    #list li {
       margin: 25px 0;
     }
   </style>
   <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
+  <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-      </head>
+</head>
 
-      <body>
-        <div class="container">
-          <section id="typeahead">
-            <div class="page-header">
-              <h1>Badge generator</h1>
+<body>
+  <div class="container">
+    <section id="typeahead">
+      <div class="page-header">
+        <h1>Badge generator</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <form>
+            <div class="form-group">
+              <label for="logoSrc">Logo src</label>
+              <input type="text" class="form-control" id="logoSrc" placeholder="http://upload.wikimedia.org/wikipedia/commons/7/73/Meetup_Logo_2015.png"
+                name="logo" value="http://hhkaos.github.io/badge-generator/img/logo.png">
             </div>
-
-            <div class="row">
-
-              <div class="col-md-6">
-                <form>
-                  <div class="form-group">
-                    <label for="logoSrc">Logo src</label>
-                    <input type="text" class="form-control" id="logoSrc" placeholder="http://upload.wikimedia.org/wikipedia/commons/7/73/Meetup_Logo_2015.png" name="logo" value="http://hhkaos.github.io/badge-generator/img/logo.png">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Header BG Color</label>
-                    <div class="input-group colorpicker-component demo demo-auto" data-part="bgHeader">
-                      <input type="text" value="#3a3a3a" class="form-control" name="bgHeader" />
-                      <span class="input-group-addon"><i></i></span>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Text Header Color</label>
-                    <div class="input-group colorpicker-component demo demo-auto" data-part="headerTxtColor">
-                    <input type="text" value="#FFFFFF" class="form-control" name="headerTxtColor" />
-                      <span class="input-group-addon"><i></i></span>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Footer BG Color</label>
-                    <div class="input-group colorpicker-component demo demo-auto" data-part="bgFooter">
-                      <input type="text" value="#53d5cf" class="form-control" name="bgFooter"/>
-                      <span class="input-group-addon"><i></i></span>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Text Footer Color</label>
-                    <div class="input-group colorpicker-component demo demo-auto" data-part="footerTxtColor">
-                      <input type="text" value="#3a3a3a" class="form-control" name="footerTxtColor" />
-                      <span class="input-group-addon"><i></i></span>
-                    </div>
-                  </div>
-
-
-                  <div class="form-group">
-                    <label for="spreadsheet">Spreadsheet ID</label>
-                    <input type="text" class="form-control" id="spreadsheet" name="id" placeholder="13J7bCeY26AaUGgW_2gOyLH5aulZFKQM_zwxMhfUJTGQ" value="13J7bCeY26AaUGgW_2gOyLH5aulZFKQM_zwxMhfUJTGQ">
-                  </div>
-
-                </form>
-
-
-              </div>
-              <article class="col-md-6">
-                <ul id="list">
-                  <li style="width:100%">
-                    <div class="top bgHeader headerTxtColor">
-                      <img src="img/logo.png" class="logo">
-                      <div class="right">Ticket type</div>
-                    </div>
-                    <p class="name">
-                      <span class="firstname">Firstname</span>
-                      <span class="lastname">Lastname</span>
-                    </p>
-                    <div class="bottom bgFooter footerTxtColor">
-                      <div class="right">@twitterhandle</div>
-                    </div>
-                  </li>
-                </ul>
-                <div>
-                <hr>
-                  <div class="clearfix">
-                    <a href="#" id="pdf" type="submit" class="btn btn-default pull-right" target="_blank">Generate PDF</a>
-                  </div>
-                  <!--<p><hr><a href="" id="pdf" target="_blank" style="display:none">Open document</a></p>-->
-                </div>
-              </article>
-            </div>
-            <div class="row" style="margin-bottom: 5em">
-
-              <div class="col-md-12">
-                <h1>Where do I get the Spreadsheet ID?</h1>
-                <ol class="task-list">
-                  <li><p>Open <a href="https://docs.google.com/spreadsheets/d/13J7bCeY26AaUGgW_2gOyLH5aulZFKQM_zwxMhfUJTGQ/edit?usp=sharing">this spreadsheet</a></p></li>
-                  <li><p>File -&gt; Make a copy</p></li>
-                  <li><p>Fill the spreadsheet with real data. It should look like this:<br><br>
-                    <a href="https://github.com/hhkaos/badge-generator/blob/gh-pages/img/excel.png" target="_blank"><img src="https://github.com/hhkaos/badge-generator/raw/gh-pages/img/excel.png" style="max-width:50%;"></a></p></li>
-                    <li><p>Next step is make this file Public; File -&gt; Publish to the web -&gt; Publish<br><br>
-                    <a href="https://github.com/hhkaos/badge-generator/blob/gh-pages/img/publish.png" target="_blank"><img src="https://github.com/hhkaos/badge-generator/raw/gh-pages/img/publish.png" style="max-width:50%;"></a></p></li>
-                    </p></li>
-                    <li><p>Extract the Spreadsheet ID from the URL, for example if your URL is this one:
-                      <a href="https://docs.google.com/spreadsheets/d/13J7bCeY26AaUGgW_2gOyLH5aulZFKQM_zwxMhfUJTGQ/pubhtml">https://docs.google.com/spreadsheets/d/13J7bCeY26AaUGgW_2gOyLH5aulZFKQM_zwxMhfUJTGQ/pubhtml</a> the id is <strong>13J7bCeY26AaUGgW_2gOyLH5aulZFKQM_zwxMhfUJTGQ</strong></p></li>
-                    <li>That's all, now you have it, place it inside the "Spreadsheet ID" input file</li>
-                      </ol>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Header BG Color</label>
+              <div class="input-group colorpicker-component demo demo-auto" data-part="bgHeader">
+                <input type="text" value="#3a3a3a" class="form-control" name="bgHeader" />
+                <span class="input-group-addon"><i></i></span>
               </div>
             </div>
-          </section>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Text Header Color</label>
+              <div class="input-group colorpicker-component demo demo-auto" data-part="headerTxtColor">
+                <input type="text" value="#FFFFFF" class="form-control" name="headerTxtColor" />
+                <span class="input-group-addon"><i></i></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">First Name Color</label>
+              <div class="input-group colorpicker-component demo demo-auto" data-part="firstNameTxtColor">
+                <input type="text" value="#000000" class="form-control" name="firstNameTxtColor" />
+                <span class="input-group-addon"><i></i></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Last Name Color</label>
+              <div class="input-group colorpicker-component demo demo-auto" data-part="lastNameTxtColor">
+                <input type="text" value="#000000" class="form-control" name="lastNameTxtColor" />
+                <span class="input-group-addon"><i></i></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Footer BG Color</label>
+              <div class="input-group colorpicker-component demo demo-auto" data-part="bgFooter">
+                <input type="text" value="#53d5cf" class="form-control" name="bgFooter" />
+                <span class="input-group-addon"><i></i></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Text Footer Color</label>
+              <div class="input-group colorpicker-component demo demo-auto" data-part="footerTxtColor">
+                <input type="text" value="#3a3a3a" class="form-control" name="footerTxtColor" />
+                <span class="input-group-addon"><i></i></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="spreadsheet">Spreadsheet ID</label>
+              <input type="text" class="form-control" id="spreadsheet" name="id" placeholder="13J7bCeY26AaUGgW_2gOyLH5aulZFKQM_zwxMhfUJTGQ"
+                value="13J7bCeY26AaUGgW_2gOyLH5aulZFKQM_zwxMhfUJTGQ">
+            </div>
+          </form>
         </div>
-        <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-        <script src="js/bootstrap-colorpicker.js"></script>
-        <script src="js/docs.js"></script>
-        <script src="js/script.js"></script>
-      </body>
+        <article class="col-md-6">
+          <ul id="list">
+            <li style="width:100%">
+              <div class="top bgHeader headerTxtColor">
+                <img src="img/logo.png" class="logo">
+                <div class="right">Ticket type</div>
+              </div>
+              <p class="name">
+                <span class="firstname firstNameTxtColor">Firstname</span>
+                <span class="lastname lastNameTxtColor">Lastname</span>
+              </p>
+              <div class="bottom bgFooter footerTxtColor">
+                <div class="right">@twitterhandle</div>
+              </div>
+            </li>
+          </ul>
+          <div>
+            <hr>
+            <div class="clearfix">
+              <a href="#" id="pdf" type="submit" class="btn btn-default pull-right" target="_blank">Generate PDF</a>
+            </div>
+            <!--<p><hr><a href="" id="pdf" target="_blank" style="display:none">Open document</a></p>-->
+          </div>
+        </article>
+      </div>
+      <div class="row" style="margin-bottom: 5em">
+        <div class="col-md-12">
+          <h1>Where do I get the Spreadsheet ID?</h1>
+          <ol class="task-list">
+            <li>
+              <p>Open <a href="https://docs.google.com/spreadsheets/d/13J7bCeY26AaUGgW_2gOyLH5aulZFKQM_zwxMhfUJTGQ/edit?usp=sharing">this spreadsheet</a></p>
+            </li>
+            <li>
+              <p>File -&gt; Make a copy</p>
+            </li>
+            <li>
+              <p>Fill the spreadsheet with real data. It should look like this:<br><br>
+                <a href="https://github.com/hhkaos/badge-generator/blob/gh-pages/img/excel.png" target="_blank"><img src="https://github.com/hhkaos/badge-generator/raw/gh-pages/img/excel.png" style="max-width:50%;"></a>
+              </p>
+            </li>
+            <li>
+              <p>Next step is make this file Public; File -&gt; Publish to the web -&gt; Publish<br><br>
+                <a href="https://github.com/hhkaos/badge-generator/blob/gh-pages/img/publish.png" target="_blank"><img src="https://github.com/hhkaos/badge-generator/raw/gh-pages/img/publish.png" style="max-width:50%;"></a>
+              </p>
+            </li>
+            </p>
+            </li>
+            <li>
+              <p>Extract the Spreadsheet ID from the URL, for example if your URL is this one:
+                <a href="https://docs.google.com/spreadsheets/d/13J7bCeY26AaUGgW_2gOyLH5aulZFKQM_zwxMhfUJTGQ/pubhtml">https://docs.google.com/spreadsheets/d/13J7bCeY26AaUGgW_2gOyLH5aulZFKQM_zwxMhfUJTGQ/pubhtml</a>                the id is <strong>13J7bCeY26AaUGgW_2gOyLH5aulZFKQM_zwxMhfUJTGQ</strong></p>
+            </li>
+            <li>That's all, now you have it, place it inside the "Spreadsheet ID" input file</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-colorpicker.js"></script>
+  <script src="js/docs.js"></script>
+  <script src="js/script.js"></script>
+</body>
 
-      </html>
+</html>
