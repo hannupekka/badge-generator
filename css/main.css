@@ -12,7 +12,10 @@ body{
 	float: left;
 	padding-bottom: 55px;
 	position: relative;
+	box-sizing: border-box;
+	border: 1px solid #fff;
 }
+
 #list li > div{
 	padding: 1em;
 }

@@ -10,6 +10,8 @@ $(function () {
 
             if (part == "bgHeader" || part == "bgFooter") {
                 $("." + part).css("background-color", color);
+            } else if(part == "borderColor") {
+                $("#list li").css("border-color", color);
             } else {
                 $("." + part).css("color", color);
             }

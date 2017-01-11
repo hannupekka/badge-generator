@@ -61,6 +61,7 @@
 			footerTxtColor = parseSecond("footerTxtColor");
 			firstNameTxtColor = parseSecond("firstNameTxtColor");
 			lastNameTxtColor = parseSecond("lastNameTxtColor");
+			borderColor = parseSecond("borderColor");
 			logo = parseSecond("logo");
 
 			if (bgHeader != 1) {
@@ -83,6 +84,9 @@
 			}
 			if (lastNameTxtColor != 1) {
 				$(".lastname").css("color", "#" + lastNameTxtColor);
+			}
+			if (lastNameTxtColor != 1) {
+				$("#list li").css("border-color", "#" + borderColor);
 			}
 
 			if (logo != 1 && logo != "") {
